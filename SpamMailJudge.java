@@ -49,7 +49,7 @@ class A {
 }
 
 public class SpamMailJudge {
-	public static final String BASE_PATH = "D:\\Study\\Êı¾İÍÚ¾òµ¼ÂÛ\\´ó×÷Òµ\\data";
+	public static final String BASE_PATH = "D:\\data";
 	static Map<String, A> allMap = new HashMap<String, A>();
 	static int spamNum;
 	static int hamNum;
@@ -85,7 +85,7 @@ public class SpamMailJudge {
 		}
 	}
 
-	// ¶ÁÈ¡ÑµÁ·¼¯ÓÊ¼şÍ¬Ê±Éú³É×Öµä
+	// è¯»å–è®­ç»ƒé›†é‚®ä»¶åŒæ—¶ç”Ÿæˆå­—å…¸
 	public static boolean readfile(String filepath, int flag) throws FileNotFoundException, IOException {
 		File file = new File(filepath);
 		if (!file.isDirectory()) {
@@ -104,7 +104,7 @@ public class SpamMailJudge {
 					try {
 						reader = new BufferedReader(new FileReader(readfile));
 						String tempString = null;
-						// Ò»´Î¶ÁÈëÒ»ĞĞ£¬Ö±µ½¶ÁÈënullÎªÎÄ¼ş½áÊø
+						// ä¸€æ¬¡è¯»å…¥ä¸€è¡Œï¼Œç›´åˆ°è¯»å…¥nullä¸ºæ–‡ä»¶ç»“æŸ
 						while ((tempString = reader.readLine()) != null) {
 							StringTokenizer st = new StringTokenizer(tempString);
 							while (st.hasMoreElements()) {
